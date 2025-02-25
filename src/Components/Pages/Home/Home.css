@@ -1,0 +1,50 @@
+.home {
+    margin-top: 130px;
+    .bg-image img {
+        position: absolute;
+        width: 100%;
+        z-index: -2;
+    }
+    .stars {
+        position: absolute;
+        font-size: 4rem;
+    }
+    .st1 {
+        right: 10%;
+        top: 30%;
+    }
+    .st2 {
+        left: 50%;
+        top: 60%;
+    }
+    .home-content {
+        width: 600px;
+        transform: translate(80px, 50px);
+        .home-texts h1 {
+            font-size: 4rem;
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.2;
+        }
+        .home-texts p {
+            font-size: 0.8rem;
+            width: 500px;
+            color: #b6b6b6;
+            margin-top: 20px;
+        }
+        .home-texts button {
+            background: #000;
+            border: 2px solid #000;
+            color: #fff;
+            border-radius: 40px;
+            padding: 10px 50px;
+            margin-top: 30px;
+            text-transform: capitalize;
+            cursor: pointer;
+            transition: all .2s;
+        }
+        .home-texts button:hover {
+            color: #000;
+            background: transparent;
+        }
+    }
+}

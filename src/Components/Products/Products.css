@@ -1,0 +1,67 @@
+
+.products-container {
+    margin-top: 250px;
+    margin-bottom: 100px;
+    position: relative;
+
+    .products {
+        h2 {
+            font-family: 'cairo', sans-serif;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: bolder;
+            font-size: 3rem;
+
+            @media (max-width: 1024px) {
+                font-size: 2.5rem;
+            }
+            @media (max-width: 768px) {
+                font-size: 2rem;
+            }
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 50px;
+            margin-top: 30px;
+
+
+            @media (max-width: 1024px) {
+                gap: 30px;
+            }
+            @media (max-width: 768px) {
+                gap: 20px;
+            }
+        }
+    }
+
+    .viewAll {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 115%;
+        border: 1px solid #0000002a;
+        background: transparent;
+        color: #000;
+        text-transform: capitalize;
+        padding: 10px 30px;
+        border-radius: 20px;
+        @media (max-width: 1024px) {
+            padding: 10px 20px;
+        }
+        @media (max-width: 768px) {
+            padding: 8px 15px;
+            top: 105%;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .products-container {
+        margin-top: 150px; 
+        margin-bottom: 50px; 
+    }
+}

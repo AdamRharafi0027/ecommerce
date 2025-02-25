@@ -1,0 +1,67 @@
+.shop-container {
+    margin-top: 80px;
+
+    > h1 {
+        font-family: 'cairo', sans-serif;
+        text-transform: uppercase;
+        font-size: 3rem;
+        position: relative;
+        margin-bottom: 70px;
+        margin-left: 20px;
+
+        /* Adjust heading font size for tablet and mobile */
+        @media (max-width: 1024px) {
+            font-size: 2.5rem;
+        }
+        @media (max-width: 768px) {
+            font-size: 2rem;
+            margin-left: 10px; /* Adjust margin for smaller screens */
+        }
+    }
+
+    > h1::after {
+        content: '';
+        border: solid;
+        position: absolute;
+        width: 700px;
+        left: 250px;
+        border-radius: 30px;
+        top: 50%;
+
+        /* Adjust width and position for tablets and mobile */
+        @media (max-width: 1024px) {
+            width: 450px;
+            left: 220px;
+        }
+        @media (max-width: 768px) {
+            width: 200px;
+            left: 170px;
+        }
+    }
+
+    .cards {
+        padding-inline: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 40px;
+
+        /* Adjust card padding for smaller screens */
+        @media (max-width: 1024px) {
+            padding-inline: 20px;
+            gap: 30px;
+        }
+        @media (max-width: 768px) {
+            padding-inline: 10px;
+            gap: 20px;
+        }
+    }
+}
+
+/* Additional adjustments for very small screens */
+@media (max-width: 480px) {
+    .shop-container {
+        margin-top: 50px;
+    }
+}
