@@ -23,3 +23,4 @@ An e-commerce website built with React, showcasing products, a shopping cart, an
    ```bash
    git clone https://github.com/AdamRharafi0027/ecommerce.git
 
+# DEVELOPED BY ADAM

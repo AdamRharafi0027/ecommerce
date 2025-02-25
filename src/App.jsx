@@ -24,7 +24,8 @@ const App = () => {
 
   return (
     <>
-      <Router>
+    <Router ></Router>
+      <Router basename="/ecommerce">
         <Header cart={cart} />
         {message && <div className="message">{message}</div>}
         <Routes>
