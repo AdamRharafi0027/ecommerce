@@ -3,6 +3,7 @@ import "./Responsive.css";
 import homeImage from "../../../../public/image/home.png";
 import {Stars} from 'react-bootstrap-icons'
 import {Products} from "../index";
+import Banner from "../../Banner/Banner";
 
 const Home = () => {
   return (
@@ -29,6 +30,7 @@ const Home = () => {
         </div>
       </section>
       <Products />
+      <Banner />
     </>
   );
 };

@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home, About, Services, Contact, Cart, Header, Shop, Products } from './Components/Pages/index';
+import { Home, About, Services, Contact, Cart, Header, Shop, Products, Footer } from './Components/Pages/index';
 import { useState } from "react";
 import products from "./Data/Data";
 import './App.css'
@@ -24,7 +24,6 @@ const App = () => {
 
   return (
     <>
-    <Router ></Router>
       <Router basename="/ecommerce">
         <Header cart={cart} />
         {message && <div className="message">{message}</div>}
@@ -37,6 +36,7 @@ const App = () => {
           <Route path="/shop" element={<Shop prods={products} addToCart={addToCart} />} />
           <Route path="/account" element={<Account  />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   );

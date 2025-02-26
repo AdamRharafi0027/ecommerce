@@ -1,7 +1,7 @@
 /* Styles for mobile */
 @media (max-width: 768px) {
   .home {
-    margin-top: 10px;
+    margin-top: 100px;
     .bg-image img,
     .stars {
       display: none;
@@ -16,7 +16,7 @@
         width: 300px;
       }
       .home-texts button {
-        width: 100%;
+        width: 50%;
         padding: 15px 50px;
       }
     }
