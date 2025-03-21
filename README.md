@@ -12,7 +12,7 @@ An e-commerce website built with React, showcasing products, a shopping cart, an
 ## Technologies Used
 
 - **React**: JavaScript library for building the user interface.
-- **Redux Toolkit**: JavaScript library for building the user interface.
+- **Redux Toolkit**: Used for managing the state of the cart, handling actions like adding and removing products, and updating the total price in a shopping cart application.
 - **React Router**: For navigation between pages (Home, Shop, Cart, etc.).
 - **Bootstrap Icons**: For responsive and modern icons.
 - **CSS**: Styling for the components and layout.
@@ -23,5 +23,6 @@ An e-commerce website built with React, showcasing products, a shopping cart, an
 1. Clone the repository:
    ```bash
    git clone https://github.com/AdamRharafi0027/ecommerce.git
+   ```
 
 # DEVELOPED BY ADAM
