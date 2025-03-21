@@ -12,6 +12,7 @@ An e-commerce website built with React, showcasing products, a shopping cart, an
 ## Technologies Used
 
 - **React**: JavaScript library for building the user interface.
+- **Redux Toolkit**: JavaScript library for building the user interface.
 - **React Router**: For navigation between pages (Home, Shop, Cart, etc.).
 - **Bootstrap Icons**: For responsive and modern icons.
 - **CSS**: Styling for the components and layout.
