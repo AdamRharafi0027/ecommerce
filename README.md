@@ -20,9 +20,17 @@ An e-commerce website built with React, showcasing products, a shopping cart, an
 
 ## Installation
 
-1. Clone the repository:
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/AdamRharafi0027/ecommerce.git
+   ```
+2. **Install Package:**
+   ```bash
+   npm install or npm i
+   ```
+3. **Run Project:**
+   ```bash
+   npm run dev
    ```
 
 # DEVELOPED BY ADAM
