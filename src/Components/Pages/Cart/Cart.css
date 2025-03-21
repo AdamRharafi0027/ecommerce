@@ -104,3 +104,35 @@
     background: #218838;
   }
   
+  .remove-message {
+    color: white;
+    background-color: red;
+    padding: 10px;
+    border-radius: 5px;
+    position: fixed;
+    top: 150px; 
+    left: 40%; 
+    transform: translate(-50%, -50%); 
+    font-size: 14px;
+    opacity: 0;
+    animation: fadeInOut 2s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) translateY(20px);
+    }
+    30% {
+      opacity: 1;
+      transform: translate(-50%, -50%) translateY(0);
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) translateY(20px);
+    }
+  }
+  

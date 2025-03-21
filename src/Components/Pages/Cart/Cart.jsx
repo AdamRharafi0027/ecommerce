@@ -1,46 +1,80 @@
+import "./Cart.css";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteProduct } from "../../Slices/CartSlice"; 
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "react-bootstrap-icons";
 import { useState } from "react";
-import './Cart.css';
 
-const Cart = ({ cart, removeFromCart }) => {
-  const [message, setMessage] = useState("");
-  const totalPrice = cart.reduce((total, prod) => total + prod.price, 0);
+const Cart = () => {
+  const dispatch = useDispatch();
+  const products = useSelector((state) => state.products.newProduct);
+  const [removeMessage, setRemoveMessage] = useState("");
 
-  const handleRemove = (index) => {
-    removeFromCart(index);
-    setMessage("Removed successfully!"); 
-    setTimeout(() => setMessage(""), 2000); 
+  const handleDeleteFromCart = (product) => {
+    dispatch(deleteProduct(product)); 
+    setRemoveMessage("❌ Product removed from cart!"); 
+
+    setTimeout(() => {
+      setRemoveMessage(""); 
+    }, 2000);
   };
 
+
+  const totalPrice = products.reduce((total, product) => total + product.price, 0);
+
   return (
-    <div className="cart-container">
-      <h2>Your Cart</h2>
+    <>
+      <div className="cart-container">
+        <h2>Your Cart</h2>
+        <Link
+          to={"/shop"}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <ArrowLeft style={{ marginRight: "5px" }} />
+          Back To Shop
+        </Link>
+        <br />
 
-      {message && <div className="message">{message}</div>}
-
-      {cart.length === 0 ? (
-        <p className="empty-cart">Your cart is empty.</p>
-      ) : (
-        <div className="cart-items">
-          {cart.map((prod, index) => (
-            <div key={index} className="cart-item">
-              <img src={prod.image} alt={prod.title} className="cart-image" />
-              <div className="cart-details">
-                <h3>{prod.title}</h3>
-                <p>${prod.price}</p>
-                <button className="remove-btn" onClick={() => handleRemove(index)}>Remove</button>
+        {products.length > 0 ? (
+          <div className="cart-items">
+            {products.map((product, index) => (
+              <div key={index} className="cart-item">
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className="cart-image"
+                />
+                <div className="cart-details">
+                  <h3>{product.title}</h3>
+                  <p>${product.price}</p>
+                  <button
+                    className="remove-btn"
+                    onClick={() => handleDeleteFromCart(product.id)}
+                  >
+                    Remove
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      )}
+            ))}
+          </div>
+        ) : (
+          <h1 style={{ textTransform: "uppercase" }}>no item here</h1>
+        )}
 
-      {cart.length > 0 && (
-        <div className="cart-footer">
-          <h3>Total: ${totalPrice.toFixed(2)}</h3>
-          <button className="checkout-btn">Checkout</button>
-        </div>
-      )}
-    </div>
+        {products.length > 0 && (
+          <div className="cart-summary">
+            <h3>Total Price: ${totalPrice.toFixed(2)}</h3>
+            <button className="checkout-btn">Proceed to Checkout</button>
+          </div>
+        )}
+      </div>
+
+      {removeMessage && <p className="remove-message">{removeMessage}</p>} 
+    </>
   );
 };
 

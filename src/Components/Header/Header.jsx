@@ -3,10 +3,13 @@ import "./Header.css";
 import "./Responsive.css";
 import { Cart2, Search, XLg, PersonCircle } from "react-bootstrap-icons";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
-const Header = ({ cart }) => {
+const Header = () => {
   const [activeMenu, setActiveMenu] = useState(false);
   const [searchActive, setSearchActive] = useState(false);
+
+  const productCounter = useSelector(state=>state.products.newProduct)
 
   const toggleActiveMenu = () => {
     setActiveMenu((prev) => !prev);
@@ -40,7 +43,7 @@ const Header = ({ cart }) => {
             />
             <Link to={"/cart"} className="cart-icon">
               <Cart2 className="header-icon" />
-              <sapn className="count">{cart.length}</sapn>
+              <sapn className="count">{productCounter.length}</sapn>
             </Link>
             <Link to="/account">
               <PersonCircle className="header-icon" />

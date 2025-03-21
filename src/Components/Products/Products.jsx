@@ -10,9 +10,7 @@ const Products = () => {
         <h2>Our Products</h2>
         <div className="cards">
           {products.slice(0, 4).map((prod) => (
-            <Link to='/shop'>
-                <Card key={prod.id} prod={prod} />
-            </Link>
+                <Card key={prod.id} product={prod} />
           ))}
         </div>
       </div>
