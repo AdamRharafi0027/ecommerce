@@ -8,6 +8,7 @@ An e-commerce website built with React, showcasing products, a shopping cart, an
 - **Add to Cart**: Users can add items to their cart and remove them.
 - **Shopping Cart**: View added items, total price, and proceed to checkout.
 - **Responsive Design**: Works across all screen sizes with a mobile-first design.
+- **Product Details Page**: Displays detailed information about each product, including image, price, and description
 
 ## Technologies Used
 
