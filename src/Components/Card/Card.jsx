@@ -3,6 +3,8 @@ import { StarFill, BagFill } from "react-bootstrap-icons";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../Slices/CartSlice";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { productDetails } from "../Slices/ProductDetailsSlice";
 
 const Card = ({ product }) => {
   const [successMessage, setSuccessMessage] = useState("");
@@ -26,9 +28,14 @@ const Card = ({ product }) => {
             <StarFill className="star" /> {rate}
           </h4>
           <h3 className="price">${price}</h3>
-          <button className="addToCart" onClick={handleAddToCart}>
-            <BagFill className="addCartIcon" />
-          </button>
+          <div className="btns">
+            <button className="addToCart" onClick={handleAddToCart}>
+              <BagFill className="addCartIcon" />
+            </button>
+            <Link to={"/details"}>
+              <button className="details" onClick={()=>{dispatch(productDetails(product))}}>details</button>
+            </Link>
+          </div>
         </div>
       </div>
       {successMessage && <p className="success-message">{successMessage}</p>}

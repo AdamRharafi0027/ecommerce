@@ -32,6 +32,16 @@
                 font-size: 1.5rem;
             } 
         }
+        .btns {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          margin-top: 10px;
+          .details {
+            text-transform: capitalize;
+            padding: 5px 20px;
+          }
+        }
     }
 }
 

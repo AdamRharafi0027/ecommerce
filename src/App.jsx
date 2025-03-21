@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home, About, Services, Contact, Cart, Header, Shop, Footer } from './Components/Pages/index';
 import './App.css'
 import Account from "./Components/Account/Account";
+import ProductDetail from "./Components/Pages/ProductDetails/ProductDetails";
 
 const App = () => {
   
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/shop" element={<Shop/>} />
           <Route path="/account" element={<Account  />} />
+          <Route path="/details" element={<ProductDetail  />} />
         </Routes>
         <Footer />
       </Router>
