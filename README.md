@@ -34,6 +34,6 @@ An e-commerce website built with React, showcasing products, a shopping cart, an
    npm run dev
    ```
 3. **DEMO LINK:**
-[Demo: ](https://adamrharafi0027.github.io/ecommerce/)
+[Demo: Click Here ](https://adamrharafi0027.github.io/ecommerce/)
 
 # DEVELOPED BY ADAM
